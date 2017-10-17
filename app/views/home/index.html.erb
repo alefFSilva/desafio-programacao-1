@@ -1,0 +1,72 @@
+
+<h1 class="text-center">Importador de Vendas</h1>
+<h1 class="text-center"><small>Desafio Nexaas</small></h1>
+
+
+<hr>
+<main class="content">
+    
+   <table class="table">
+  <thead>
+    <tr>
+        <th>#</th>
+        <th>Purchaser Name</th>
+        <th>Item Description</th>
+        <th>Item Price</th>
+        <th>Purchase Count</th>
+        <th>Merchant Address</th>
+        <th>Merchant Name</th>
+     </tr>
+  </thead>
+<tbody>
+    
+  <% if Venda.all.count > 0 %>
+    <% Venda.all.each do |venda| %>
+    
+    <tr>
+        
+        <td><%=venda.id               %></td>
+        <td><%=venda.purchaser_name   %></td>
+        <td><%=venda.item_description %></td>
+        <td><%=venda.item_price       %></td>
+        <td><%=venda.purchase_count   %></td>
+        <td><%=venda.merchant_address %></td>
+        <td><%=venda.merchant_name    %></td>
+        
+    </tr>
+    
+    <% end %>
+    <% else %>
+    
+        <h2 class="msg-sem-vendas">Nenhuma venda encontrada, importe um arquivo de vendas.</h2>
+    <% end %>
+    
+</tbody>       
+
+
+</table>
+    
+
+    <div class="receita">
+        
+        <% if @receitaBruta > 0 %>
+            <h2> Receita Bruta:  <%= @receitaBruta %></h2>
+        <% end %>
+        
+    </div>
+    
+
+</main>
+
+<hr>
+
+<div class="options">
+    
+    <%= form_tag({action: :upload}, multipart: true) do %>
+
+       <%= file_field_tag 'arquivoTxt' %>
+       <%= submit_tag 'Carregar Arquivo', :class => 'btn btn-secondary'  %>
+
+    <% end %>
+    
+</div>
