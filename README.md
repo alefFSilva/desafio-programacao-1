@@ -1,26 +1,24 @@
-<<<<<<< HEAD
-# README
+### Requisitos da aplicação
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Instalação do Ruby  2.x.x
+- Instalação do Rails 5.x.x
 
-Things you may want to cover:
+Após realizar as instalações, clonar o projeto para a máquina.
 
-* Ruby version
+  git clone https://github.com/alefFSilva/desafio-programacao-1.git
 
-* System dependencies
 
-* Configuration
+## Rodando a aplicação
 
-* Database creation
+Via terminal navegue(cd) até a pasta do projeto.
+Dentro da pasta do projeto, inicialize a aplicação utilizando a instrução 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+   Rails Server
+   
+ A aplicação irá iniciar e apresentará o endereço de localhost com a porta de acesso, por padrão localhost:3000.
+ Com o navegador aberto, digite o endereço com a porta.
+ Você será redirecionado para a página principal da aplicação.
+   
 
 * ...
 =======
